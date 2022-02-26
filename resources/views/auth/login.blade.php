@@ -63,7 +63,7 @@
 					<p>Don't have an account? <a href="{{ route('register') }}">Create one here</a></p>
 				</div>	
 				  <form method="POST" action="{{ route('login') }}" class="contact-bx">
-            @csrf
+             {{csrf_field}}
 				
 					<div class="row placeani">
 						<div class="col-lg-12">
