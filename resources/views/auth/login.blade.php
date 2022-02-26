@@ -1,101 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-  <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../images/favicon.ico">
 
-    <title>Easy ERP - Log in </title>
-  
-    <!-- Vendors Style-->
-    <link rel="stylesheet" href="{{ asset('backend/css/vendors_css.css') }}">
-      
-    <!-- Style-->  
-    <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/css/skin_color.css') }}">   
+	<!-- META ============================================= -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	
+	<!-- DESCRIPTION -->
+	<meta name="description" content="" />
+	
+	<!-- OG -->
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- FAVICONS ICON ============================================= -->
+	<link rel="icon" href="assets2/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="assets2/images/favicon.ico" />
+	
+	<!-- PAGE TITLE HERE ============================================= -->
+	<title>SM System Login </title>
+	
+	<!-- MOBILE SPECIFIC ============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 
+	<script src="assets2/js/html5shiv.min.js"></script>
+	<script src="assets2/js/respond.min.js"></script>
+	
+	
+	<!-- All PLUGINS CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="assets2/css/assets2.css">
+	
+	<!-- TYPOGRAPHY ============================================= -->
+	<link rel="stylesheet" type="text/css" href="assets2/css/typography.css">
+	
+	<!-- SHORTCODES ============================================= -->
+	<link rel="stylesheet" type="text/css" href="assets2/css/shortcodes/shortcodes.css">
+	
+	<!-- STYLESHEETS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="assets2/css/style.css">
+	<link class="skin" rel="stylesheet" type="text/css" href="assets2/css/color/color-1.css">
+	
 </head>
-<body class="hold-transition theme-primary bg-gradient-primary">
-    
-    <div class="container h-p100">
-        <div class="row align-items-center justify-content-md-center h-p100">   
-            
-            <div class="col-12">
-                <div class="row justify-content-center no-gutters">
-                    <div class="col-lg-4 col-md-5 col-12">
-                        <div class="content-top-agile p-10">
-                            <h2 class="text-white">Get started with Us</h2>
-                            <p class="text-white-50">Sign in to start your session</p>                          
-                        </div>
-                        <div class="p-30 rounded30 box-shadowed b-2 b-dashed">
-   
-     <form method="POST" action="{{ route('login') }}">
+<body id="bg">
+<div class="page-wraper">
+	<div id="loading-icon-bx"></div>
+	<div class="account-form">
+		<div class="account-head" style="background-image:url(assets2/images/background/bg2.jpg);">
+			<a href=""><img src="assets2/images/favicon.ico" alt=""></a>
+		</div>
+		<div class="account-form-inner">
+			<div class="account-container">
+				<div class="heading-bx left">
+					<h2 class="title-head">Login to your <span>Account</span></h2>
+					<p>Don't have an account? <a href="{{ route('register') }}">Create one here</a></p>
+				</div>	
+				  <form method="POST" action="{{ route('login') }}" class="contact-bx">
             @csrf
+				
+					<div class="row placeani">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<div class="input-group">
+									<label>Your Name</label>
+					 <input type="email" id="email" name="email" class="form-control" placeholder="">
+									
+								</div>
+							</div>
+						</div>
 
-        <div class="form-group">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text bg-transparent text-white"><i class="ti-user"></i></span>
-                </div>
-       <input type="email" id="email" name="email" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Username">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text  bg-transparent text-white"><i class="ti-lock"></i></span>
-                </div>
-  <input type="password" id="password" name="password" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Password">
-            </div>
-        </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="checkbox text-white">
-                <input type="checkbox" id="basic_checkbox_1" >
-                <label for="basic_checkbox_1">Remember Me</label>
-              </div>
-            </div>
-            <!-- /.col -->
-            <div class="col-6">
-             <div class="fog-pwd text-right">
-                <a href="{{ route('password.request') }}" class="text-white hover-info"><i class="ion ion-locked"></i> Forgot pwd?</a><br>
-              </div>
-            </div>
-            <!-- /.col -->
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-info btn-rounded mt-10">SIGN IN</button>
-            </div>
-            <!-- /.col -->
-          </div>
-    </form>                                                     
+						<div class="col-lg-12">
+							<div class="form-group">
+								<div class="input-group"> 
+									<label>Your Password</label>
+									<input type="password" id="password" name="password" class="form-control" placeholder="">
+								
+								</div>
+							</div>
+						</div>
 
-    <div class="text-center text-white">
-      <p class="mt-20">- Sign With -</p>
-      <p class="gap-items-2 mb-20">
-          <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-facebook"></i></a>
-          <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-twitter"></i></a>
-          <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-google-plus"></i></a>
-          <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-instagram"></i></a>
-        </p>    
-    </div>
-    
-    <div class="text-center">
-        <p class="mt-15 mb-0 text-white">Don't have an account? <a href="{{ route('register') }}" class="text-info ml-5">Sign Up</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Vendor JS -->
-    <script src="{{ asset('backend/js/vendors.min.js') }}"></script>
-    <script src="{{ asset('../assets/icons/feather-icons/feather.min.js') }}"></script>    
+						<div class="col-lg-12">
+							<div class="form-group form-forget">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+									<label class="custom-control-label" for="customControlAutosizing">Remember me</label>
+								</div>
+							  <a href="{{ route('password.request') }}" class="ml-auto"></i> Forgot Password?</a>
+								</di
+							</div>
+						</div>
+						<div class="col-lg-12 m-b30">
+						
+							<button name="submit" type="submit" value="Submit" class="btn button-md">Login</button>
+						</div>
+						<div class="col-lg-12">
+							<h6>Login with Social media</h6>
+							<div class="d-flex">
+								<a class="btn flex-fill m-r5 facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a>
+								<a class="btn flex-fill m-l5 google-plus" href="#"><i class="fa fa-google-plus"></i>Google Plus</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- External JavaScripts -->
+<script src="assets2/js/jquery.min.js"></script>
+<script src="assets2/vendors/bootstrap/js/popper.min.js"></script>
+<script src="assets2/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets2/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="assets2/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+<script src="assets2/vendors/magnific-popup/magnific-popup.js"></script>
+<script src="assets2/vendors/counter/waypoints-min.js"></script>
+<script src="assets2/vendors/counter/counterup.min.js"></script>
+<script src="assets2/vendors/imagesloaded/imagesloaded.js"></script>
+<script src="assets2/vendors/masonry/masonry.js"></script>
+<script src="assets2/vendors/masonry/filter.js"></script>
+<script src="assets2/vendors/owl-carousel/owl.carousel.js"></script>
+<script src="assets2/js/functions.js"></script>
+<script src="assets2/js/contact.js"></script>
 
 </body>
+
 </html>
